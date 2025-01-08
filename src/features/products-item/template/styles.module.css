@@ -19,6 +19,14 @@
     margin-bottom: 20px;
 }
 
+.ratingWrapper {
+    margin-bottom: 20px;
+}
+
+.ratingWrapper > *:not(:first-child) {
+    margin-left: 10px;
+}
+
 .categoryWrapper {
     margin-bottom: 20px;
 }

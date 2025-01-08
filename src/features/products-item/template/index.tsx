@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import styles from './styles.module.css';
 import { useParams } from "react-router";
 import { AspectRatio, Badge, Box, Button, Inset, Strong, Text } from "@radix-ui/themes";
@@ -8,11 +8,17 @@ import { StringService } from "../../../services/string";
 import { CartIcon } from "../../../components/cart-icon";
 import { Product } from "../../../entities/product";
 import { ProductsService } from "../../products/service";
+import { StarFilledIcon, StarIcon } from "@radix-ui/react-icons";
+import { LoadingScreen } from "../../../components/loading-screen";
 
 export const ProductsItemPageTemplate: FC = () => {
     const params = useParams();
     const id = Number(params.id);
     const product = useSelector(selectProduct(id));
+
+    if (!product) {
+        return <LoadingScreen />
+    }
 
     const isValid = StringService.isValidUrl(product.images[0]);
     const url = isValid ? product.images[0] : '/product-placeholder.png';
@@ -20,6 +26,15 @@ export const ProductsItemPageTemplate: FC = () => {
 
     const handleAddProductToCart = (product: Product) => () => {
         ProductsService.addProductToCart(product);
+    }
+
+    const randomRating = () => {
+        const value = Math.floor(Math.random() * 6);
+
+        return [1, 2, 3, 4, 5].map((star, idx) => ({
+            id: `${idx}-${star}`,
+            value: value >= star,
+        }));
     }
 
     return (
@@ -51,6 +66,17 @@ export const ProductsItemPageTemplate: FC = () => {
             <Text className={styles.descriptionWrapper}>
                 {product.description}
             </Text>
+
+            <Box className={styles.ratingWrapper}>
+                {randomRating().map((star) => (
+                    <Fragment key={star.id}>
+                        {star.value
+                            ? <StarFilledIcon color="green" height={25} width={25} />
+                            : <StarIcon color="green" height={25} width={25} />}
+                    </Fragment>
+                ))}
+            </Box>
+
             <Text className={styles.categoryWrapper}>
                 <Badge size="3">
                     {product.category.name}
