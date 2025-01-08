@@ -1,0 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.titleWrapper {
+    margin-bottom: 20px;
+}
+
+.imageWrapper {
+    margin-bottom: 20px;
+}
+
+.descriptionWrapper {
+    margin-bottom: 20px;
+}
+
+.categoryWrapper {
+    margin-bottom: 20px;
+}
+
+.priceWrapper {
+    margin-bottom: 20px;
+}
+
+.button {}
