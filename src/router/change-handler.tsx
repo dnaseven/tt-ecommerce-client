@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC, useCallback, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FeatureRouter, FeaturesRouter } from './types';
 
@@ -9,7 +9,7 @@ interface RouteChangeHandlerProps {
 const RouteChangeHandler: FC<RouteChangeHandlerProps> = ({ features }) => {
   const location = useLocation();
 
-  const handle = (path: string, features: FeaturesRouter) => {
+  const handle = useCallback((path: string, features: FeaturesRouter) => {
     for (const key in features) {
       const feature = features[key as keyof FeaturesRouter] as FeatureRouter;
 
@@ -18,11 +18,11 @@ const RouteChangeHandler: FC<RouteChangeHandlerProps> = ({ features }) => {
         break;
       }
     }
-  };
+  }, [location]);
 
   useEffect(() => {
     handle(location.pathname, features);
-  }, [location]);
+  }, [location, features, handle]);
 
   return null;
 };

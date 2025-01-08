@@ -80,7 +80,7 @@ export const productsSlice = createSlice({
         }
 
         const allIds = state.allIds.slice();
-        const byIds = { ... state.byIds };
+        const byIds = { ...state.byIds };
         
         allIds.push(action.payload.id);
         byIds[action.payload.id] = action.payload;

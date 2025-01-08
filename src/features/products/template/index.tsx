@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import styles from './styles.module.css';
-import { Box, Grid, Spinner } from "@radix-ui/themes";
+import { Box, Grid } from "@radix-ui/themes";
 import { LoadingScreen } from "../../../components/loading-screen";
 
 interface Props {

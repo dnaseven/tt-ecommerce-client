@@ -1,4 +1,3 @@
-import router from "../../router";
 import { FeatureRouter } from "../../router/types";
 import { ProductsService } from "../products/service";
 

@@ -1,10 +1,10 @@
 import { FC, useState } from "react"
 import styles from './styles.module.css';
-import { Badge, Button, Link as UiLink } from "@radix-ui/themes";
+import { Badge, Button } from "@radix-ui/themes";
 import { useSelector } from "react-redux";
 import { selectCart } from "../../features/cart/store";
 import { CartIcon } from "../cart-icon";
-import { Link as RouterLink, useHref, useLocation, useNavigate } from "react-router";
+import { Link as RouterLink, useLocation, useNavigate } from "react-router";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const CounterBadge = () => {

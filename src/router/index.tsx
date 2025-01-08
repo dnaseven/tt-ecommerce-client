@@ -1,4 +1,4 @@
-import { createBrowserRouter, Link, Navigate, Outlet } from "react-router";
+import { createBrowserRouter, Navigate, Outlet } from "react-router";
 import { ProductsRouter } from "../features/products/router";
 import { ProductsPage } from "../features/products/page";
 import RouteChangeHandler from "./change-handler";

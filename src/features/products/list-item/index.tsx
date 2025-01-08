@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Product } from "../../../entities/product";
 import styles from './styles.module.css';
 import { StringService } from "../../../services/string";
-import { AspectRatio, Badge, Box, Button, Card, Em, Inset, Strong, Text } from "@radix-ui/themes";
+import { AspectRatio, Badge, Box, Button, Card, Inset, Strong, Text } from "@radix-ui/themes";
 import { CartIcon } from "../../../components/cart-icon";
 import { Link } from "react-router";
 

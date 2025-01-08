@@ -1,7 +1,6 @@
 import { createSelector, createSlice } from '@reduxjs/toolkit'
 import { Product } from '../../entities/product';
 import { RootState } from '../../store';
-import { stat } from 'fs';
 
 interface CartState {
     allIds: Product['id'][];

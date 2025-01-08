@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Product } from "../../../entities/product";
 import { ProductsListItem } from "../list-item";
-import styles from './styles.module.css';
 import { Grid } from "@radix-ui/themes";
 
 interface Props {
