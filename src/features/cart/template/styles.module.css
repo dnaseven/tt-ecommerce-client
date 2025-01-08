@@ -1,0 +1,28 @@
+.wrapper {
+    width: 70%;
+    min-width: 300;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {}
+
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+    border-top: 1px solid #eaeaea;
+    padding: 20px 0; 
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        width: 90%;
+        padding: 0 20px;
+    }
+    
+}
