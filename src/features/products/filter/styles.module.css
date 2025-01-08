@@ -1,0 +1,23 @@
+.wrapper {}
+
+.titleWrapper {
+  margin-bottom: 10px;
+}
+
+.inputWrapper {
+  margin-bottom: 20px;
+}
+
+.categoriesTitleWrapper {
+  margin-bottom: 10px;
+}
+
+.categoriesWrapper {
+  margin-bottom: 20px;
+}
+
+.categoryWrapper {
+  margin-bottom: 10px;
+}
+
+.resetButton {}

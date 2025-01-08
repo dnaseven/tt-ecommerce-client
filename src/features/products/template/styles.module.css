@@ -1,0 +1,39 @@
+.wrapper {
+    padding: 0 20px;
+    grid-template-columns: 30% 1fr;
+}
+
+.filter {
+    margin-top: 20px;
+}
+
+.content {
+    margin: 55px 0 auto;
+}
+
+.cartDrawer {
+    position: fixed;
+    right: -100vw;
+    transform: translateX(100%);
+    z-index: 10;
+}
+
+@media screen and (max-width: 995px) {
+    .wrapper {
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .filter {
+        margin-top: 10px;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+
+    .cartDrawer {
+        right: 0;
+        transform: translateX(0);
+    }
+}

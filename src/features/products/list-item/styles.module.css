@@ -1,0 +1,24 @@
+.wrapper {}
+
+.imageWrapper {}
+
+.imageWrapper[data-valid-url='false'] img {}
+
+.imageWrapper img {}
+
+.titleWrapper {}
+
+.titleWrapper a {
+  text-decoration: none;
+  color: var(--gray-100);
+}
+
+.priceWrapper {}
+
+.priceWrapper::before {}
+
+.addToCartWrapper {}
+
+.addToCartWrapper button {}
+
+.addToCartWrapper button:hover {}
