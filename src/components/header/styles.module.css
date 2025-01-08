@@ -1,0 +1,131 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 60px;
+    background-color: #0342e8;
+    color: #6083dd;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #feffff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Heebo', sans-serif;
+    text-decoration: none;
+}
+
+.menu {}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu ul li a {
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: #6083dd;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    color: #feffff;
+}
+
+.right {}
+
+.cart {
+    display: block;
+}
+
+.badge {
+    color: white;
+    background-color: grey;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.mobileMenuPaper {
+    position: fixed;
+    display: block;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: -100vh;
+    left: 0;
+    padding: 20px;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+}
+
+.mobileMenuPaperHeader {
+    display: flex;
+    justify-content: end;
+}
+
+.mobileMenuPaperBody {}
+
+.mobileMenuPaperBody ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobileMenuPaperBody ul li {
+    margin-bottom: 20px;
+}
+
+.mobileMenuPaperBody ul li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #0342e8;
+    text-decoration: none;
+}
+
+.mobileMenuPaperBody ul li a:hover {
+    color: #6083dd;
+}
+
+.floatingMobileCart {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+
+@media screen and (max-width: 480px) {
+    .logo {}
+    
+    .menu {
+        display: none;
+    }
+    
+    .cart button {
+        display: none;
+    }
+    
+    .mobileMenu {
+        display: block;
+    }
+
+    .mobileMenuPaper[data-open=true] {
+        display: block;
+        top: 0;
+    }
+
+    .floatingMobileCart {
+        display: block;
+    }
+}
